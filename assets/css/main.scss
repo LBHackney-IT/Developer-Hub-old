@@ -1,0 +1,76 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "govuk-frontend/all";
+
+$hackney-black: #000;
+$hackney-white: #FFF;
+$hackney-green: #00694F;
+$hackney-lines-dark: #17b15a;
+$hackney-lines-mid: #74c044;
+$hackney-lines-light: #9bcf80;
+
+body {
+  margin: 0;
+}
+
+@mixin hackney-lines() {
+  border-bottom: 4px solid $hackney-lines-mid;
+
+  &::before {
+    content: '';
+    background: $hackney-lines-dark;
+    bottom: 5px;
+    display: block;
+    height: 5px;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  &::after {
+    content: '';
+    background: $hackney-lines-light;
+    bottom: -11px;
+    display: block;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.hackney-header {
+  @include hackney-lines;
+
+  background: $hackney-black;
+  padding: 10px 0 20px;
+  position: relative;
+  margin-bottom: 10px;
+
+  &__logo {
+    position: relative;
+    top: 6px;
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: $hackney-white;
+  }
+}
+
+.govuk-tag {
+  &--positive {
+    background: $hackney-green;
+  }
+
+  &--negative {
+    background: orange;
+  }
+}
+
+.align-right {
+  text-align: right;
+}
