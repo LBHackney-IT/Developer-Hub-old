@@ -10,8 +10,10 @@
 ### Running locally
 
 1. Install Docker
-2. Run `docker-compose build`
-3. Run `docker-compose up`
+2. Install Node.js
+3. Run `docker-compose build` to build the site
+4. Run `npm install` to install the GOV.UK frontend styles
+5. Run `docker-compose up` to start the server
 
 The site will reload as you make changes, it typically takes about 20 seconds to rebuild.
 
