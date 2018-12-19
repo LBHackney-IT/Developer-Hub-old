@@ -10,7 +10,7 @@ staging_swagger_url: https://g6bw0g0ojk.execute-api.eu-west-2.amazonaws.com/stag
 production_available: true
 production_url: https://g6bw0g0ojk.execute-api.eu-west-2.amazonaws.com/production/repairs/swagger/index.html
 production_swagger_url: https://g6bw0g0ojk.execute-api.eu-west-2.amazonaws.com/production/repairs/swagger/index.html
-summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+summary: more details on api.
 github_url: https://github.com/LBHackney-IT/Hackney_Repairs_API
 ---
 
