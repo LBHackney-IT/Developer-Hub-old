@@ -2,8 +2,8 @@
 layout: api
 title: Asbestos API
 permalink: /apis/asbestos_api.md/
-compliant: true
-compliant_message: 'Compliant: 12/12'
+compliant: false
+compliant_message: 'Non Compliant: 7/12'
 staging_available: true
 staging_url: http://10.160.0.137:667/swagger/index.html
 staging_swagger_url: http://10.160.0.137:667/swagger/index.html
@@ -11,7 +11,7 @@ production_available: true
 production_url: http://10.160.0.137:557/swagger/index.html
 production_swagger_url: http://10.160.0.137:557/swagger/index.html
 summary: more details on api.
-github_url: https://github.com/LBHackney-IT/Hackney_Repairs_API
+github_url: https://github.com/LBHackney-IT/HackneyAsbestosAPI
 ---
 
 ## Overview
@@ -31,5 +31,5 @@ Building Maintenance & Estate Environment.
 ## Compliancy
 {: .govuk-heading-l}
 
-The Example API is **compliant** with the Hackney API Standards.
+The Example API is **not compliant** with the Hackney API Standards.
 {: .govuk-body}
