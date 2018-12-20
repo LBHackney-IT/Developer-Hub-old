@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Hackney Developer Hub
-permalink: /
-redirect_from:
-  - /apis/
+title: Available APIs
+permalink: /api_index.md/
 ---
 
 <div class="govuk-grid-row">
