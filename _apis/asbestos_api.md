@@ -10,7 +10,7 @@ staging_swagger_url: http://10.160.0.137:667/swagger/index.html
 production_available: true
 production_url: http://10.160.0.137:557/swagger/index.html
 production_swagger_url: http://10.160.0.137:557/swagger/index.html
-summary: more details on api.
+summary: The Asbestos API provides asbestos related information on London Borough of Hackney property stock.
 github_url: https://github.com/LBHackney-IT/HackneyAsbestosAPI
 ---
 
