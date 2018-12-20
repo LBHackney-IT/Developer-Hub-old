@@ -20,6 +20,12 @@ github_url: https://github.com/LBHackney-IT/LBHTenancyAPI
 The Tenancy API provides up to date information on tenancies with the council, connecting to the legacy Universal Housing database for most data and the NCC CRM for the latest contact data.
 {: .govuk-body}
 
+## Service Area
+{: .govuk-heading-l}
+
+Tenancy
+{: .govuk-body}
+
 ## Compliancy
 {: .govuk-heading-l}
 

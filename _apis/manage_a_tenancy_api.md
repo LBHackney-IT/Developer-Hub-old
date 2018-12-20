@@ -27,6 +27,11 @@ The API can:
  Assist in Tenancy Management interaction.
 {: .govuk-body}
 
+## Service Area
+{: .govuk-heading-l}
+
+Manage a Tenancy
+{: .govuk-body}
 ## Compliancy
 {: .govuk-heading-l}
 
