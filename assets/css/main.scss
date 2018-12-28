@@ -75,24 +75,33 @@ body {
   text-align: right;
 }
 
-.sidenav {
-  position: fixed;
-  z-index: 1;
-  top: 100px;
-  left: 25px;
-  overflow-x: hidden;
-  padding: 8px 0;
+.sidenav{
+  margin-top: 20px;
+  z-index: 1000;
+  border-right: 1px solid #064579;
+}
+.sidenav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
-.sidenav a {
+.sidenav ul li{
+  line-height: 40px;
+}
+
+.sidenav ul a {
   text-decoration: none;
   display: block;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 18px;
   color: #000;
 }
 
-.sidenav a:hover {
+.sidenav ul a:hover {
   color: #064579;
   text-decoration: underline;
 }
