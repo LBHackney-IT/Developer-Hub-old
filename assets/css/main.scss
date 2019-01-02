@@ -74,3 +74,39 @@ body {
 .align-right {
   text-align: right;
 }
+
+.sidenav{
+  margin-top: 20px;
+  z-index: 1000;
+  border-right: 1px solid #064579;
+}
+.sidenav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+.sidenav ul li{
+  line-height: 40px;
+}
+
+.sidenav ul a {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #000;
+}
+
+.sidenav ul a:hover {
+  color: #064579;
+  text-decoration: underline;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

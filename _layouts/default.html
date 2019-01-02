@@ -45,9 +45,24 @@
         </span>
       </p>
     </div>
-
     <main class="govuk-main-wrapper" id="main-content" role="main">
-      {{ content }}
+      <div class="govuk-width-container">
+       <div class="govuk-grid-row">
+         <div class="govuk-grid-column-one-quarter">
+           <nav class="sidenav">
+             <ul>
+               <li><a href="#">What APIs do</a></li>
+              <li><a href="#">How to create APIs</a></li>
+              <li><a href="#">Platform info</a></li>
+               <li><a href="/api_index.md">List of APIs</a></li>
+             </ul>
+           </nav>
+         </div>
+         <div class="govuk-grid-column-three-quarters">
+           {{ content }}
+         </div>
+       </div>
+     </div>
     </main>
   </div>
 </body>
