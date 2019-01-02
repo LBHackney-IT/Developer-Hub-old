@@ -11,13 +11,13 @@ production_available: true
 production_url: https://example.com
 production_swagger_url: https://example.com/swagger/v1/swagger.json
 summary: The Income Collection API provides dummy data.
-github_url: https://github.com/LBHackney-IT/LBHTenancyAPI
+github_url: https://github.com/LBHackney-IT/LBH-IncomeCollection
 ---
 
 ## Overview
 {: .govuk-heading-l}
 
-The Tenancy API provides up to date information on tenancies and arrears information with the council, connecting to the legacy Universal Housing database for most data and the NCC CRM for the latest contact data.
+The Income Collection API provides up to date information on.. 
 {: .govuk-body}
 
 ## Service Area
