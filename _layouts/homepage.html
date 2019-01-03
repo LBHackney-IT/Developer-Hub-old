@@ -49,10 +49,10 @@
 	<div class="introductionapi">
 		<h5>Introduction to APIs</h5>
 		<ul>
-			<li class="linkapi"><a href="">What APIs do</a></li>
-			<li class="linkapi"><a href="">How to create APIs</a></li>
-			<li class="linkapi"><a href="">Platform info</a></li>
-			<li class="linkapi"><a href="">List of available APIs</a></li>
+			<li class="linkapi"><a href="#what-api-do">What APIs do</a></li>
+			<li class="linkapi"><a href="#how-to-create-api">How to create APIs</a></li>
+			<li class="linkapi"><a href="#platform-info">Platform info</a></li>
+			<li class="linkapi"><a href="#available-apis">List of available APIs</a></li>
 		</ul>
 	</div>
 
@@ -77,7 +77,7 @@
 		</div>
 
 		<div class="checklist-element">
-			<h3>What is an API?</h3>
+			<h3 id="what-api-do">What is an API?</h3>
 			<p>API stands for "Application Programming Interface".</p>
 			<p>An API is usually a web address or url which can be accessed by any device which is able to connect to the API over the internet or network.</p>
 			<p>They provide a set of controlled methods or actions that enable a systems developer to communicate with another system in a controlled manner.</p>
@@ -106,7 +106,7 @@
 		</div>
 		<br></br>
 		<div class="checklist-element">
-			<h3>How to create APIs according to the HackIt API playbook</h3>
+			<h3 id="how-to-create-api">How to create APIs according to the HackIt API playbook</h3>
 			<p>The HackIt API playbook can be found on <a href="https://github.com/LBHackney-IT/API-Playbook">GitHub</a>.<br/>
 			It provides clear guidance on the standards that are being followed when developing new APIs or refactoring APIs which were created prior to the existence of the Playbook.</p>
 			<p>
@@ -115,7 +115,7 @@
 		</div>
 <br></br>
 		<div class="checklist-element">
-			<h3>What is the API platform?</h3>
+			<h3 id="platform-info">What is the API platform?</h3>
 			<p>There is more to APIs that just sending a command and the API responding. You don't necessarily want anyone on the internet to be able to turn your living room lights on. You need to be able decide who is allowed to turn the lights on and perhaps even how often they can turn the lights on over a set period of time.</p>
 
 			<p>This is where the API gateway comes in. Using an API Gateway we are able to issue Tokens to people who want to use our APIs. Each time a developer attempts to access our APIs they will provide this token, essentially telling us who they are.  Requests to our APIs that do not provide the token will be rejected. Using that token we can limit how often they can use the API.</p>
@@ -124,7 +124,7 @@
 		</div>
 
 		<div class="checklist-element">
-			<h3>What APIs are available on the Hub?</h3>
+			<h3 id="available-apis">What APIs are available on the Hub?</h3>
 			<ul>
 				<li><a href="apis/tenancyapi.html">Tenancy API</a></li>
 				<li><a href="apis/managetenancy.html">Manage a tenancy API</a></li>
