@@ -49,10 +49,11 @@
          <div class="govuk-grid-column-one-quarter">
            <nav class="sidenav">
              <ul>
-               <li><a href="#">What APIs do</a></li>
-              <li><a href="#">How to create APIs</a></li>
-              <li><a href="#">Platform info</a></li>
+               <li><a href="index.html">What APIs do</a></li>
+              <li><a href="#content-index-create">How to create APIs</a></li>
+              <li><a href="#content-index-platform">Platform info</a></li>
                <li><a href="/api_index.md">List of APIs</a></li>
+               <li><a href="#">Compliance Checklist</a></li>
              </ul>
            </nav>
          </div>
@@ -96,7 +97,7 @@
     			</ul>
     		<br></br>
     		<div class="checklist-element">
-    			<h3 class="govuk-heading-m">How we create HackIT APIs</h3>
+    			<h3 id="content-index-create" class="govuk-heading-m">How we create HackIT APIs</h3>
     			<p class="govuk-body">All HackIT developed code should meet the 12 <a href="https://github.com/LBHackney-IT/Hackney-Development-Standards">Hackney Development Standards</a>.
     				These 12 factors (albeit in a adapted or extended form) are used by many development teams around the world to ensure that HackIT APIs are consistent, supportable and of high quality</p>
     			<p class="govuk-body">All newly created HackIT APIs will be developed using the guidelines in the <a href="https://github.com/LBHackney-IT/API-Playbook">HackIt API playboook</a>.
@@ -105,7 +106,7 @@
     		</div>
     <br></br>
     		<div class="checklist-element">
-    			<h3 class="govuk-heading-m">What is the API platform?</h3>
+    			<h3 id="content-index-platform" class="govuk-heading-m">What is the API platform?</h3>
     			<p class="govuk-body">There is more to APIs than just sending a command and the API responding. You obviously don't want anyone on the internet to be able to turn your living room lights on. You need to be able decide who is allowed to turn the lights on. Using an API Gateway we are able to issue Tokens to people who want to use our APIs. Each time a developer attempts to access our APIs they will provide this token, essentially telling us who they are.  Requests to our APIs that do not provide the token will be rejected.</p>
 
     			<img src="/assets/images/APIGateway.svg" style="width: 100%; height: auto;">
