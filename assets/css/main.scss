@@ -17,34 +17,54 @@ body {
   margin: 0;
 }
 
-@mixin hackney-lines() {
-  border-bottom: 4px solid $hackney-lines-mid;
+@mixin hackney-lines($border-direction: "bottom", $direction: "bottom", $spacing-top: 5px, $spacing-bottom: -11px) {
+  @if $border-direction == 'bottom' {
+    border-bottom: 4px solid $hackney-lines-mid;
+  }
+
+  @if $border-direction == 'top' {
+    border-top: 4px solid $hackney-lines-mid;
+  }
 
   &::before {
     content: '';
     background: $hackney-lines-dark;
-    bottom: 5px;
     display: block;
     height: 5px;
     left: 0;
     position: absolute;
     right: 0;
+
+    @if $border-direction == 'bottom' {
+      bottom: $spacing-top;
+    }
+
+    @if $border-direction == 'top' {
+      top: $spacing-top;
+    }
   }
 
   &::after {
     content: '';
     background: $hackney-lines-light;
-    bottom: -11px;
     display: block;
     height: 3px;
     left: 0;
     position: absolute;
     right: 0;
+
+    @if $border-direction == 'bottom' {
+      bottom: $spacing-bottom;
+    }
+
+    @if $border-direction == 'top' {
+      top: $spacing-bottom;
+    }
   }
 }
 
 .hackney-header {
-  @include hackney-lines;
+  @include hackney-lines($border-direction: "bottom", $direction: "bottom");
 
   background: $hackney-black;
   padding: 10px 0 20px;
@@ -123,6 +143,14 @@ body {
   padding-left: 20px;
   font-size: 1rem;
   font-size: 16px;
+}
+
+footer {
+  @include hackney-lines($border-direction: "top", $direction: "top", $spacing-top: -13px, $spacing-bottom: 5px);
+
+  padding: 20px 0 10px;
+  background-color: $hackney-black;
+  position: relative;
 }
 
 @media screen and (max-height: 450px) {
