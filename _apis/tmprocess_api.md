@@ -26,18 +26,12 @@ The API:
 {: .govuk-body}
 
 - Retrieves the layout and schema for a page based on a page ID. It uses custom logic to perform JSON mapping of the elements to achieve key/value structure and to comply with required structure of the Angular component.
-{: .govuk-body}
 - Retrieves response data and status data for a given process. Response data is an answer that an officer records for a given question that is part of the process. Status data is the status of different sections (complete / incomplete) for a given process.
-{: .govuk-body}
 - Post data back to the database by ensuring it is saved in a key-value format. Posting data also deals with the creation of physical files (e.g. images) that are saved onto the server.
-{: .govuk-body}
 - Gets data for final review page of a process by merging all data saved and grouping it based on contact ID.
-{: .govuk-body}
 - Deals with creating / updating a record of each new process created at the point of initiation. To achieve that, a database table holds information regarding CRM GUID of the interaction created, timestamp,
 json data.
-{: .govuk-body}
 - Saves to the database and creates a physical file to the server - PDF.
-{: .govuk-body}
 - Prepares and sends an email.
 {: .govuk-body}
 

@@ -8,9 +8,10 @@
 $hackney-black: #000;
 $hackney-white: #FFF;
 $hackney-green: #00694F;
-$hackney-lines-dark: #17b15a;
-$hackney-lines-mid: #74c044;
-$hackney-lines-light: #9bcf80;
+$hackney-lines-dark: #00664F;
+$hackney-lines-mid: #00B140;
+$hackney-lines-light: #84BD00;
+$hackney-border-color: #064579;
 
 body {
   margin: 0;
@@ -75,12 +76,13 @@ body {
   text-align: right;
 }
 
-.sidenav{
+.sidenav {
   margin-top: 20px;
   z-index: 1000;
-  border-right: 1px solid #064579;
+  border-right: 1px solid $hackney-border-color;
 }
-.sidenav ul{
+
+.sidenav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -89,21 +91,38 @@ body {
   overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
-.sidenav ul li{
+.sidenav ul li {
   line-height: 40px;
 }
 
 .sidenav ul a {
   text-decoration: none;
   display: block;
-  margin-bottom: 5px;
   font-size: 18px;
-  color: #000;
+  color: $hackney-black;
+  padding-left: 10px;
+  position: relative;
 }
 
-.sidenav ul a:hover {
-  color: #064579;
-  text-decoration: underline;
+.sidenav ul a:hover,
+.sidenav ul a:focus,
+.sidenav ul a:active {
+  background-color: $hackney-lines-mid;
+  color: $hackney-white;
+}
+
+.sidenav ul a:after {
+  content: "\203A";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  float: right;
+}
+
+.sidenav li > ul a {
+  padding-left: 20px;
+  font-size: 1rem;
+  font-size: 16px;
 }
 
 @media screen and (max-height: 450px) {
