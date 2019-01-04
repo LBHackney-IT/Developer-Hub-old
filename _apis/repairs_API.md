@@ -35,11 +35,11 @@ More specifically, this API can:
 ## Service Area
 {: .govuk-heading-l}
 
-Housing Repairs- Track a repair,Report a Repair
+Housing Repairs - Track a repair, Report a repair.
 {: .govuk-body}
 
 ## Compliancy
 {: .govuk-heading-l}
 
-The Example API is **compliant** with the Hackney API Standards.
+The Repairs API is **compliant** with the Hackney API Standards.
 {: .govuk-body}
