@@ -31,5 +31,5 @@ Building Maintenance & Estate Environment.
 ## Compliancy
 {: .govuk-heading-l}
 
-The Example API is **not compliant** with the Hackney API Standards.
+The Asbestos API is **not compliant** with the Hackney API Standards.
 {: .govuk-body}

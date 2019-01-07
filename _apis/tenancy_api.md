@@ -29,5 +29,5 @@ Housing - Tenancy Arrears Management
 ## Compliancy
 {: .govuk-heading-l}
 
-The tenancy API is **compliant** with the Hackney API Standards.
+The Tenancy API is **compliant** with the Hackney API Standards.
 {: .govuk-body}

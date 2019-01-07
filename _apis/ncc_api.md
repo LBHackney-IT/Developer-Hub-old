@@ -10,7 +10,7 @@ staging_swagger_url: https://sandboxapi.hackney.gov.uk/lbhnccapi/swagger/index.h
 production_available: true
 production_url: http://api.hackney.gov.uk/lbhnccapi/swagger/index.html
 production_swagger_url: http://api.hackney.gov.uk/lbhnccapi/swagger/index.html
-summary: The NCC API provides up to date information on Neighbourhood Contact Centre CRM application, connecting to on cloud Microsoft Dynamics CRM 365 datastore and the legacy Universal Housing database for some data. 
+summary: The NCC API provides up to date information on Neighbourhood Contact Centre CRM application, connecting to on cloud Microsoft Dynamics CRM 365 datastore and the legacy Universal Housing database for some data.
 github_url: https://github.com/LBHackney-IT/LBHNCCApi
 ---
 
@@ -29,5 +29,5 @@ Housing Neighbourhood Contact Centre(NCC)
 ## Compliancy
 {: .govuk-heading-l}
 
-The Example API is **compliant** with the Hackney API Standards.
+The NCC API is **compliant** with the Hackney API Standards.
 {: .govuk-body}

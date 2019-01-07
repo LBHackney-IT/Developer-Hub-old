@@ -17,13 +17,13 @@ github_url: https://github.com/LBHackney-IT/RentAccountAPI
 ## Overview
 {: .govuk-heading-l}
 
-The Rent Account API provides ....
+The Rent Account API provides financial information regarding tenants' rent balance.
 {: .govuk-body}
 
 ## Service Area
 {: .govuk-heading-l}
 
-Housing - ???
+Housing - Income Services
 {: .govuk-body}
 
 ## Compliancy

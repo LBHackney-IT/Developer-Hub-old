@@ -55,5 +55,5 @@ Housing : Manage a Tenancy
 ## Compliancy
 {: .govuk-heading-l}
 
-The Example Non Compliant API is **not compliant** with the Hackney API Standards.
+The Manage a Tenancy API is **not compliant** with the Hackney API Standards.
 {: .govuk-body}

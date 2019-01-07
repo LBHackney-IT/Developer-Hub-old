@@ -44,5 +44,5 @@ Housing - Housing Management
 ## Compliancy
 {: .govuk-heading-l}
 
-The tenancy management process API is not **compliant** with the Hackney API Standards.
+The Tenancy Management process API is not **compliant** with the Hackney API Standards.
 {: .govuk-body}
