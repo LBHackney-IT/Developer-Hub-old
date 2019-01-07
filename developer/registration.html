@@ -186,12 +186,12 @@
     };
 
     var dataSurname = {
-      Name : 'surname',
+      Name : 'custom:surname',
       Value : lastname, //get from form field
     };
 
     var dataOrganisation = {
-      Name : 'organisation',
+      Name : 'custom:organisation',
       Value : organisation, //get from form field
     };
 
@@ -203,8 +203,8 @@
 
     attributeList.push(attributeEmail);
     attributeList.push(attributeName);
-    // attributeList.push(attributeSurname);
-    // attributeList.push(attributeOrganisation);
+    attributeList.push(attributeSurname);
+    attributeList.push(attributeOrganisation);
 
     userPool.signUp(username, password, attributeList, null, function(err, result){
       if (err) {
