@@ -23,7 +23,7 @@ The NCC API provides up to date information on Neighbourhood Contact Centre CRM 
 ## Service Area
 {: .govuk-heading-l}
 
-Housing Neighbourhood Contact Centre(NCC)
+Housing - Neighbourhood Contact Centre (NCC)
 {: .govuk-body}
 
 ## Compliancy

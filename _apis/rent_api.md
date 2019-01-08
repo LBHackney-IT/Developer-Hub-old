@@ -10,7 +10,7 @@ staging_swagger_url: https://example.com/staging/swagger/v1/swagger.json
 production_available: true
 production_url: https://example.com
 production_swagger_url: https://example.com/swagger/v1/swagger.json
-summary: The Rent API provides up to date information on ......
+summary: The Rent API provides up to date information on Rent Accounts.
 github_url: https://github.com/LBHackney-IT/RentAccountAPI
 ---
 
