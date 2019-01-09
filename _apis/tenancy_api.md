@@ -5,11 +5,11 @@ permalink: /apis/tenancy_api/
 compliant: true
 compliant_message: 'Compliant: 12/12'
 staging_available: true
-staging_url: https://example.com/staging
-staging_swagger_url: https://example.com/staging/swagger/v1/swagger.json
+staging_url: https://g6bw0g0ojk.execute-api.eu-west-2.amazonaws.com/staging/tenancy/
+staging_swagger_url: https://g6bw0g0ojk.execute-api.eu-west-2.amazonaws.com/staging/tenancy/swagger
 production_available: true
-production_url: https://example.com
-production_swagger_url: https://example.com/swagger/v1/swagger.json
+production_url: https://g6bw0g0ojk.execute-api.eu-west-2.amazonaws.com/production/tenancy/swagger
+production_swagger_url: https://g6bw0g0ojk.execute-api.eu-west-2.amazonaws.com/production/tenancy/swagger
 summary: The Tenancy API provides up to date information on tenancies and arrears information about tenants.
 github_url: https://github.com/LBHackney-IT/LBHTenancyAPI
 ---
