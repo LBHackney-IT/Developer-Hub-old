@@ -1,6 +1,6 @@
-const setCookie = (token) => {
-    const expiryTimeInMilliSeconds = Date.now() +(1 * 60 * 60 * 1000);
-    let ck = "token=" + token + ";" + "expiry=" + expiryTimeInMilliSeconds;
+const setCookie = (token, expiryTime) => {
+    // const expiryTimeInMilliSeconds = Date.now() +(1 * 60 * 60 * 1000);
+    let ck = "token=" + token + ";" + "expiry=" + expiryTime;
     document.cookie = "token=" + token;
 }
 
