@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="/assets/js/amazon-cognito-auth.min.js"></script>
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+	<script src="/assets/js/amazon-cognito-identity.min.js"></script>
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/helper.js"></script>
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
@@ -74,4 +80,46 @@
     <div class="govuk-width-container"></div>
   </footer>
 </body>
+<script>
+// function checkUser(){
+// //  alert('checking user');
+
+// var data = {
+// 		UserPoolId : _config.cognito.userPoolId,
+//         ClientId : _config.cognito.clientId
+//     };
+//     var userPool = new AmazonCognitoIdentity.CognitoUserPool(data);
+//     alert(userPool);
+//     console.log(userPool);
+//     var cognitoUser = userPool.getCurrentUser();
+
+// 	window.onload = function(){
+//     if (cognitoUser != null) {
+//         cognitoUser.getSession(function(err, session) {
+//             if (err) {
+//                 alert(err);
+//                 return;
+//             }
+//             console.log('session validity: ' + session.isValid());
+// 			//Set the profile info
+// 			cognitoUser.getUserAttributes(function(err, result) {
+// 				if (err) {
+// 					console.log(err);
+// 					return;
+//         }
+//         function setCookie() {
+//           document.cookie = "token="+result;
+//         }
+// 				console.log(result);
+// 				document.getElementById("email_value").innerHTML = result[2].getValue();
+// 			});
+
+//         });
+//     }
+// }
+// }
+
+
+</script>
+
 </html>

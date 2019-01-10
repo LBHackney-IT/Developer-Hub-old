@@ -10,7 +10,8 @@
 	<script src="/assets/js/amazon-cognito-auth.min.js"></script>
 	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
 	<script src="/assets/js/amazon-cognito-identity.min.js"></script>
-	<script src="/assets/js/config.js"></script>
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/helper.js"></script>
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
   <body>
@@ -100,36 +101,38 @@
     <script>
 
       function signInButton() {
-
-    	var authenticationData = {
-            Username : document.getElementById("emailaddress").value,
-            Password : document.getElementById("password").value,
+        let accessToken;
+    	  const authenticationData = {
+          Username : document.getElementById("emailaddress").value,
+          Password : document.getElementById("password").value,
         };
 
-        var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
-
-    	var poolData = {
-            UserPoolId : _config.cognito.userPoolId, // Your user pool id here
-            ClientId : _config.cognito.clientId, // Your client id here
+        const authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
+    
+        const poolData = {
+          UserPoolId : _config.cognito.userPoolId, // Your user pool id here
+          ClientId : _config.cognito.clientId, // Your client id here
         };
 
-        var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+        const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
-        var userData = {
-            Username : document.getElementById("emailaddress").value,
+        const userData = {
+            Username : authenticationData.Username,
             Pool : userPool,
         };
 
-        var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
-
-    	cognitoUser.authenticateUser(authenticationDetails, {
+        const cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
+        cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: function (result) {
-    			var accessToken = result.getAccessToken().getJwtToken();
-    			console.log(accessToken);
+              const accessToken = result.getAccessToken().getJwtToken();
+              const expiryTime = result.accessToken.payload.exp;
+              setCookie(accessToken, expiryTime);
+              // redirect to back to api
             },
-
             onFailure: function(err) {
-                alert(err.message || JSON.stringify(err));
+              console.log(err);
+              // Notify user of error
+              // alert(err.message || JSON.stringify(err));
             },
         });
       }
