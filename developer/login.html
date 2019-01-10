@@ -124,9 +124,7 @@
         const cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
         cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: function (result) {
-              const accessToken = result.getAccessToken().getJwtToken();
-              const expiryTime = result.accessToken.payload.exp;
-              setCookie(accessToken, expiryTime);
+
               window.location = document.referrer
             },
             onFailure: function(err) {

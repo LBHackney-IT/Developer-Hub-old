@@ -1,16 +1,23 @@
-const setCookie = (token, expiryTime) => {
-    // const expiryTimeInMilliSeconds = Date.now() +(1 * 60 * 60 * 1000);
-    let ck = "token=" + token + ";" + "expiry=" + expiryTime;
-    document.cookie = "token=" + token;
+function setCookie(cname, cvalue, exdays) {
+var d = new Date();
+document.cookie = cname + "=" + cvalue + ";" + exdays + ";path=/";
 }
 
-const getCookie = (name) => {
-    let cookie = {};
-    document.cookie.split(';').forEach(function(el) {
-    let [k,v] = el.split('=');
-    cookie[k.trim()] = v;
-  })
-  return cookie[name];  
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
 
 const redirectTo = (url) => {
