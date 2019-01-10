@@ -108,7 +108,7 @@
         };
 
         const authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
-    
+
         const poolData = {
           UserPoolId : _config.cognito.userPoolId, // Your user pool id here
           ClientId : _config.cognito.clientId, // Your client id here
@@ -127,7 +127,7 @@
               const accessToken = result.getAccessToken().getJwtToken();
               const expiryTime = result.accessToken.payload.exp;
               setCookie(accessToken, expiryTime);
-              // redirect to back to api
+              window.location = document.referrer
             },
             onFailure: function(err) {
               console.log(err);
