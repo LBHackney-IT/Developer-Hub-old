@@ -12,6 +12,7 @@
 	<script src="/assets/js/amazon-cognito-identity.min.js"></script>
   <script src="/assets/js/config.js"></script>
   <script src="/assets/js/helper.js"></script>
+  <script src="/assets/js/pages/login.js"></script>
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
   <body>
@@ -98,42 +99,5 @@
     </div>
   </div>
 </div>
-    <script>
-
-      function signInButton() {
-        let accessToken;
-    	  const authenticationData = {
-          Username : document.getElementById("emailaddress").value,
-          Password : document.getElementById("password").value,
-        };
-
-        const authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
-
-        const poolData = {
-          UserPoolId : _config.cognito.userPoolId, // Your user pool id here
-          ClientId : _config.cognito.clientId, // Your client id here
-        };
-
-        const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
-
-        const userData = {
-            Username : authenticationData.Username,
-            Pool : userPool,
-        };
-
-        const cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
-        cognitoUser.authenticateUser(authenticationDetails, {
-            onSuccess: function (result) {
-              redirectTo('/api_index.md')
-              // window.location = document.referrer
-            },
-            onFailure: function(err) {
-              console.log(err);
-              // Notify user of error
-              // alert(err.message || JSON.stringify(err));
-            },
-        });
-      }
-    </script>
   </body>
 </html>
