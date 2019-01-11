@@ -124,8 +124,8 @@
         const cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
         cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: function (result) {
-
-              window.location = document.referrer
+              redirectTo('/api_index.md')
+              // window.location = document.referrer
             },
             onFailure: function(err) {
               console.log(err);
