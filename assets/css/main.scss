@@ -82,6 +82,12 @@ body {
   }
 }
 
+.hackney-header__login {
+  word-break: break-all;
+  color: $hackney-white;
+  margin-bottom: 0;
+}
+
 .govuk-tag {
   &--positive {
     background: $hackney-green;
