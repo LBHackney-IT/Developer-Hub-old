@@ -78,8 +78,7 @@
 
             cognitoUser.confirmRegistration(code, true, function(err, result) {
                 if (err) {
-                    console.log(err);
-                    return;
+                    redirectTo('/');
                 }
                 redirectTo('/developer/login');
             });
