@@ -52,49 +52,37 @@ layout: default
 </div>
 
 <script>
-  
-  // If it exists ping AWS cognito
-    //  if token is valid continue
-    // Else redirect to login
-  // Else  redirect to login
-  
-  // Check cookie exists or Get cookie
-  const ck = getCookie("token");
-  
-  if(!ck || ck.length === 0) {
-    redirectTo('/developer/login');
-  }
+
   checkIfUserIsAuthenticated();
 
   function checkIfUserIsAuthenticated() {
-    // check the cookie expiry date
-    // const poolData = {
-    //   UserPoolId : _config.cognito.userPoolId,    
-    //   ClientId : _config.cognito.clientId
-    // };
+    const poolData = {
+      UserPoolId : _config.cognito.userPoolId,
+      ClientId : _config.cognito.clientId
+    };
 
-    // var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
-    // var cognitoUser = userPool.getCurrentUser();
-    
-    // if (cognitoUser != null) {
-    //     cognitoUser.getSession(function(err, session) {
-    //         if (err) {
-    //           redirectTo('/developer/login');
-    //         }
-    //         console.log('session validity: ' + session.isValid());
-		// 	//Set the profile info
-		// 	cognitoUser.getUserAttributes(function(err, result) {
-		// 		if (err) {
-		// 			console.log(err);
-		// 			return;
-		// 		}
-		// 		console.log(result);
-		// 		document.getElementById("email_value").innerHTML = result[2].getValue();
-		// 	});
+    var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+    var cognitoUser = userPool.getCurrentUser();
 
-    //     });
-    // } else {
-    //   redirectTo('/developer/login');
-    // }
+    if (cognitoUser != null) {
+        cognitoUser.getSession(function(err, session) {
+            if (err) {
+              redirectTo('/developer/login');
+            }
+            console.log('session validity: ' + session.isValid());
+			//Set the profile info
+			cognitoUser.getUserAttributes(function(err, result) {
+				if (err) {
+					console.log(err);
+					return;
+				}
+				console.log(result);
+				document.getElementById("email_value").innerHTML = 'Welcome '+ result[4].getValue() + ' ' + result[0].getValue();
+			});
+
+        });
+    } else {
+      redirectTo('/developer/login');
+    }
   }
   </script>
