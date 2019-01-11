@@ -214,7 +214,7 @@
       cognitoUser = result.user;
       console.log('user name is ' + cognitoUser.getUsername());
       //change elements of page
-      document.getElementById("auth").innerHTML = "Your account has been created.  Please check your email for a verification link. <br><a href=/developer/login>login</a>";
+      document.getElementById("auth").innerHTML = "<p class='govuk-body>Your account has been created.  Please check your email for a verification link.<br><a href=/developer/login>login</a></p> ";
 
     });
     }
