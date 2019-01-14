@@ -4,37 +4,7 @@ layout: default
 <script>
 
     checkIfUserIsAuthenticated();
-  
-    function checkIfUserIsAuthenticated() {
-      const poolData = {
-        UserPoolId : _config.cognito.userPoolId,
-        ClientId : _config.cognito.clientId
-      };
-  
-      var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
-      var cognitoUser = userPool.getCurrentUser();
-  
-      if (cognitoUser != null) {
-          cognitoUser.getSession(function(err, session) {
-              if (err) {
-                redirectTo('/developer/login');
-              }
-              console.log('session validity: ' + session.isValid());
-        //Set the profile info
-        cognitoUser.getUserAttributes(function(err, result) {
-          if (err) {
-            console.log(err);
-            return;
-          }
-          console.log(result);
-          document.getElementById("email_value").innerHTML = 'Welcome '+ result[3].getValue();
-        });
-  
-          });
-      } else {
-        redirectTo('/developer/login');
-      }
-    }
+    
     </script>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
