@@ -55,3 +55,16 @@ layout: default
     {{ page.content }}
   </div>
 </div>
+
+<div>
+  <button id="requestTokenButton" class="govuk-button">Request Access Token</button>
+</div>
+
+<script type="text/javascript">
+  document.getElementById("requestTokenButton").onclick = function () {
+        location.href = "tokenlist.html";
+    };
+</script>
+
+
+
