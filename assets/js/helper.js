@@ -52,7 +52,8 @@ const checkIfUserIsAuthenticated = () => {
         return;
       }
       console.log(result);
-      document.getElementById("email_value").innerHTML = 'Welcome '+ result[3].getValue();
+      let nameObject = result.find(element => element.Name === 'name');
+      document.getElementById("email_value").innerHTML = 'Welcome '+ nameObject.Value;
     });
 
       });
