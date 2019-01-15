@@ -52,14 +52,16 @@ layout: default
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+      <div>
+          <!-- <h2 class="govuk-heading-l">Request Access to the API</h2> -->
+            <button class="govuk-button" onclick="redirectTo('/access')">Request API-Key</button> 
+        </div>
     {{ page.content }}
   </div>
 </div>
 
-<div>
-  <button class="govuk-button" onclick="redirectTo('/tokenlist')">Request Access Token</button>
-</div>
 
+ 
 
 
 
