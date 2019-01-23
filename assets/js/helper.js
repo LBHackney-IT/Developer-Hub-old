@@ -28,36 +28,4 @@ const getUrlParameter = (name) => {
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-};
-
-const checkIfUserIsAuthenticated = () => {
-  const poolData = {
-    UserPoolId : _config.cognito.userPoolId,
-    ClientId : _config.cognito.clientId
-  };
-
-  var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
-  var cognitoUser = userPool.getCurrentUser();
-
-  if (cognitoUser != null) {
-      cognitoUser.getSession(function(err, session) {
-          if (err) {
-            redirectTo('/developer/login');
-          }
-          console.log('session validity: ' + session.isValid());
-    //Set the profile info
-    cognitoUser.getUserAttributes(function(err, result) {
-      if (err) {
-        console.log(err);
-        return;
-      }
-      console.log(result);
-      let nameObject = result.find(element => element.Name === 'name');
-      document.getElementById("email_value").innerHTML = 'Welcome '+ nameObject.Value;
-    });
-
-      });
-  } else {
-    redirectTo('/developer/login');
-  }
 }
