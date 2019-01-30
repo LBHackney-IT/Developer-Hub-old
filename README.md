@@ -1,6 +1,6 @@
 # Hackney Developer Hub
 
-The source code behind [developer.api.hackney.gov.uk](developer.api.hackney.gov.uk).
+The source code behind [developer.api.hackney.gov.uk](http://developer.api.hackney.gov.uk).
 
 ## Stack
 
